@@ -21,7 +21,7 @@ import { Component, OnInit } from '@angular/core';
 
      for (let i = 0; i < this.logRegisterService.logMessages.length; i++){
        let message = this.logRegisterService.logMessages[i];
-       console.log((i + 1) + ". " + message['person'] + ", " + message['message']);
+       console.log((i + 1) + ". " + message['person'] + ", " + message['message']+", "+message['createdAt']);
      }
    }
 
