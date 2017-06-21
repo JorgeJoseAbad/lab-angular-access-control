@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { LogRegisterService } from '../log-register.service';
+import { LogRegisterService } from '../services/log-register.service';
 
  @Component({
    selector: 'app-log-form-component',
@@ -16,12 +16,12 @@ import { LogRegisterService } from '../log-register.service';
 
      submitForm(myForm){
        console.log(myForm);
-       this.logRegisterService.addRegister(myForm.value.person, myForm.value.message);
+       this.logRegisterService.addAccessItem(myForm.value.person, myForm.value.message);
        alert('Added person to log!');
 
        for (let i = 0; i < this.logRegisterService.logMessages.length; i++){
          let message = this.logRegisterService.logMessages[i];
-         let message2 = this.logRegisterService.getRegisters()[i];
+         let message2 = this.logRegisterService.getAccessLog()[i];
          console.log(message);
          console.log(message2);
          console.log((i + 1) + ". " + message['person'] + ", " + message['message']+", "+message['createdAt']);
