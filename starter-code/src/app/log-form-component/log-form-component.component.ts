@@ -20,6 +20,7 @@ import { LogRegisterService } from '../services/log-register.service';
        console.log(myForm.value.message);
        this.logRegisterService.addAccessItem(myForm.value.person, myForm.value.message);
        alert('Added new person to log!');
+       console.log(this.logRegisterService.getAccessLog());
 
        for (let i = 0; i < this.logRegisterService.logMessages.length; i++){
          let message = this.logRegisterService.logMessages[i];
