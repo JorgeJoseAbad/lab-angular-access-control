@@ -17,6 +17,7 @@ import { Injectable } from '@angular/core';
        this.personToAdd = {person, message, createdAt: new Date()};
        console.log(this.personToAdd);
        this.logMessages.push(this.personToAdd);
+       console.log(this.logMessages);
      }
 
  }
